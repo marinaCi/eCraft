@@ -1,0 +1,113 @@
+<?
+session_start();
+?>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/inserisci.css">
+		<title>eCraft</title>
+	</head>
+	<body>
+		<form action="index.php" method="POST" enctype="multipart/form-data">
+		<div id="all">
+			<a href="index.php?comando=home"><div id="top">
+			<img src="images/logo.png">
+			<div id="search" align="right">
+				<form action="index.php">
+				<input type="search" name="ricerca" placeholder="cerca">
+				<input type=submit name="comando" value="Cerca" class="search"><br>
+				<a href="">Ricerca avanzata</a>
+				</form>
+			 </div>
+		</div>
+		<div id="center">
+			<div id="left">
+				<table cellpadding="5">
+					<tr>
+						<td>
+							Nome prodotto
+						</td>
+						<td>
+							<input type="text" name="nome" required="required">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Prezzo
+						</td>
+						<td>
+							<input type="text" name="prezzo" required="required">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Disponibilit&agrave;
+						</td>
+						<td>
+							<input type="text" name="disponibilita" required="required">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Descrizione
+						</td>
+						<td rowspan="10">
+							<textarea cols="60" rows="10" id="descrizione" name="descrizione"></textarea>
+						</td>
+					</tr>
+				</table>
+				Inserisci immagine:<input type="file" name="immagine" accept="image/jpeg" required="required">
+			</div>
+			<div id="right">
+			<fieldset name="materiali">
+				<legend>Materiali:</legend>
+				Selezionare i materiali (se sono pi&ugrave di due, selezionare i due principali).<br>
+				<input type="checkbox" name="materiali[]" value="Argilla"><span class="checkbox">Argilla</span>
+				<input type="checkbox" name="materiali[]" value="Porcellana"><span class="checkbox">Porcellana</span>
+				<input type="checkbox" name="materiali[]" value="Legno">Legno<br>
+				<input type="checkbox" name="materiali[]" value="Ferro"><span class="checkbox">Ferro Battuto</span>
+				<input type="checkbox" name="materiali[]" value="Vetro"><span class="checkbox">Vetro</span>
+				<input type="checkbox" name="materiali[]" value="Resina">Resina<br>
+				<input type="checkbox" name="materiali[]" value="Ceramica"><span class="checkbox">Ceramica</span>
+				<input type="checkbox" name="materiali[]" value="Terracotta"><span class="checkbox">Terracotta</span>
+				<input type="checkbox" name="materiali[]" value="Corten">Corten<br>
+				<input type="checkbox" name="materiali[]" value="Ghisa"><span class="checkbox">Ghisa</span>
+				<input type="checkbox" name="materiali[]" value="Vimini"><span class="checkbox">Vimini</span>
+				<input type="checkbox" name="materiali[]" value="Pietra">Pietra
+			</fieldset>
+			<fieldset name="ambiente">
+				<legend>Ambiente:</legend>
+				Selezionare l'ambiente adatto per esporre l'articolo (una scelta possibile).<br>
+				<input type="checkbox" name="ambiente" value="Cucina"><span class="checkbox">Cucina</span>
+				<input type="checkbox" name="ambiente" value="Salone"><span class="checkbox">Salone</span>
+				<input type="checkbox" name="ambiente" value="Bagno">Bagno<br>
+				<input type="checkbox" name="ambiente" value="Camera"><span class="checkbox">Camera da letto</span>
+				<input type="checkbox" name="ambiente" value="Cameretta"><span class="checkbox">Cameretta</span>
+				<input type="checkbox" name="ambiente" value="Esterno">Esterno
+			</fieldset>
+			<fieldset name="categoria">
+				<legend>Categorie:</legend>
+				Selezionare le categorie del prodotto (una scelta possibile).<br>
+				<input type="checkbox" name="categoria" value="Bicchieri"><span class="checkbox">Bicchiere</span>
+				<input type="checkbox" name="categoria" value="Bigiotteria"><span class="checkbox">Bigiotteria</span>
+				<input type="checkbox" name="categoria" value="Gioielli">Gioiello<br>
+				<input type="checkbox" name="categoria" value="Mobili"><span class="checkbox">Mobile</span>
+				<input type="checkbox" name="categoria" value="Orologi"><span class="checkbox">Orologio</span>
+				<input type="checkbox" name="categoria" value="Piatti">Piatto<br>
+				<input type="checkbox" name="categoria" value="Sedie"><span class="checkbox">Sedia</span>
+				<input type="checkbox" name="categoria" value="Statue"><span class="checkbox">Statua</span>
+				<input type="checkbox" name="categoria" value="Suppellettili">Suppellettile<br>
+				<input type="checkbox" name="categoria" value="Tavoli"><span class="checkbox">Tavolo</span>
+				<input type="checkbox" name="categoria" value="Vasi"><span class="checkbox">Vaso</span>
+				<input type="checkbox" name="categoria" value="Lampade">Lampade
+			</fieldset>
+			</div>			
+		</div>
+		<div id="inserisci"><input type="submit" name="comando" value="Anteprima" class="inserisci"></div>
+		</form>
+		<div id="bottom">
+		<span class="bottom"><a href="index.php?comando=privacy">Informativa sulla privacy </a>&nbsp;
+			&nbsp;&copy 2013, eCraft.it</span>
+		</div>
+	</div>
+</body>
+</html>
